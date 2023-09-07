@@ -414,15 +414,15 @@ export function ChatActions(props: {
   const navigate = useNavigate();
   const chatStore = useChatStore();
 
-  // switch themes
-  const theme = config.theme;
-  function nextTheme() {
-    const themes = [Theme.Auto, Theme.Light, Theme.Dark];
-    const themeIndex = themes.indexOf(theme);
-    const nextIndex = (themeIndex + 1) % themes.length;
-    const nextTheme = themes[nextIndex];
-    config.update((config) => (config.theme = nextTheme));
-  }
+// switch themes
+const theme = config.theme || Theme.Dark; // 默认主题为 Theme.Dark
+function nextTheme() {
+  const themes = [Theme.Auto, Theme.Light, Theme.Dark];
+  const themeIndex = themes.indexOf(theme);
+  const nextIndex = (themeIndex + 1) % themes.length;
+  const nextTheme = themes[nextIndex];
+  config.update((config) => (config.theme = nextTheme));
+}
 
   // stop all responses
   const couldStop = ChatControllerPool.hasPending();
