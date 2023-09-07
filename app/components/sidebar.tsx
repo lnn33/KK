@@ -174,8 +174,8 @@ export function SideBar(props: { className?: string }) {
             </Link>
           </div>
           <div className={styles["sidebar-action"]}>
-            <a href={https://kk-peach.vercel.app/} target="_blank" rel="noopener noreferrer">
-              <IconButton icon={<GithubIcon />} shadow />
+            <a href=} target="_blank" rel="noopener noreferrer">
+              <IconButton icon={} shadow />
             </a>
           </div>
         </div>
