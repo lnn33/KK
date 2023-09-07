@@ -174,9 +174,6 @@ export function SideBar(props: { className?: string }) {
             </Link>
           </div>
           <div className={styles["sidebar-action"]}>
-            </a>
-          </div>
-        </div>
         <div>
           <IconButton
             icon={<AddIcon />}
