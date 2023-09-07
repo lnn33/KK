@@ -164,7 +164,7 @@ export function SideBar(props: { className?: string }) {
               onClick={async () => {
                 if (await showConfirm(Locale.Home.DeleteChat)) {
                   chatStore.deleteSession(chatStore.currentSessionIndex);
-                }
+             }
               }}
             />
           </div>
@@ -174,7 +174,13 @@ export function SideBar(props: { className?: string }) {
             </Link>
           </div>
           <div className={styles["sidebar-action"]}>
+            <a href={REPO_URL} target="_blank" rel="noopener noreferrer">
+              <IconButton icon={<GithubIcon />} shadow />
+            </a>
+          </div>
+        </div>
         <div>
+          <IconButton
             icon={<AddIcon />}
             text={shouldNarrow ? undefined : Locale.Home.NewChat}
             onClick={() => {
